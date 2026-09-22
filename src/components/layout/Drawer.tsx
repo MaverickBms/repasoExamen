@@ -41,7 +41,7 @@ export function Drawer({ open, onClose }: DrawerProps) {
           style={{ marginTop: "auto", borderTop: "1px solid var(--border)", paddingTop: "var(--sp-3)" }}
         >
           <span className="text-3" style={{ fontSize: "var(--text-xs)" }}>
-            v0.1 · FASE 2
+            v0.1
           </span>
           <ThemeToggle />
         </div>

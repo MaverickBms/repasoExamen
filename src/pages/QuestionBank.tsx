@@ -7,15 +7,15 @@ import { BankPractice } from "../components/exercises/BankPractice";
 import { SourceRefView } from "../components/content/SourceRef";
 import { QUESTION_BANK } from "../data/banco/banco-preguntas";
 
-export function QuestionBank() {
-  const [mode, setMode] = useState<"revisar" | "practicar">("revisar");
+export function QuestionBank({ initialMode = "revisar" }: { initialMode?: "revisar" | "practicar" }) {
+  const [mode, setMode] = useState<"revisar" | "practicar">(initialMode);
   return (
     <>
       <PageHeader
         eyebrow="Banco de preguntas"
         eyebrowIcon="bank"
         title="Banco de preguntas"
-        subtitle="Las 90 preguntas reales de la guía en 5 niveles: conceptual, comprensión, análisis, código y UML (cap. 12). El capítulo no da respuestas: en modo práctica tus reflexiones registran XP."
+        subtitle="Las 90 preguntas reales de la guía en cinco niveles: conceptual, comprensión, análisis, código y UML (capítulo 12). El capítulo no incluye respuestas: en el modo práctica, sus reflexiones se registran y otorgan XP."
       />
       <div className="stack" style={{ gap: "var(--sp-3)" }}>
         <SourceRefView ref={QUESTION_BANK.source} label="Capítulo 12 · fuente" />

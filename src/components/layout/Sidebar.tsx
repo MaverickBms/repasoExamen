@@ -9,7 +9,7 @@ export function Sidebar() {
       <NavGroups current={current} />
       <div className="sidebar-footer">
         <span className="text-3" style={{ fontSize: "var(--text-xs)" }}>
-          v0.1 · FASE 2
+          v0.1
         </span>
         <ThemeToggle />
       </div>

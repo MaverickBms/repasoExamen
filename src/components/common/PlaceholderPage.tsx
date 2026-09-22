@@ -38,7 +38,7 @@ export function PlaceholderPage({
             </p>
             <p className="mt-2 text-3">
               {note ??
-                "El contenido académico de esta sección se integrará en la FASE 3 (Contenido educativo), conservando la guía guiaPOO.md como fuente principal."}
+                "El contenido académico de esta sección se está preparando y estará disponible en una próxima versión de la plataforma, conservando la guía guiaPOO.md como fuente principal."}
             </p>
           </div>
         </Card>

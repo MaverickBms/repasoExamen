@@ -18,8 +18,8 @@ export function ModuleList() {
 function ModuleCard({ module: m }: { module: Module }) {
   return (
     <Card padding="md" variant="hover">
-      <div className="row" style={{ justifyContent: "space-between", gap: "var(--sp-4)" }}>
-        <div className="row" style={{ gap: "var(--sp-4)", alignItems: "flex-start" }}>
+      <div className="row" style={{ justifyContent: "space-between", gap: "var(--sp-4)", flexWrap: "wrap", alignItems: "center" }}>
+        <div className="row" style={{ gap: "var(--sp-4)", alignItems: "flex-start", flexWrap: "wrap", flex: "1 1 220px" }}>
           <div
             className="levelbar-badge"
             style={{ minWidth: 40, height: 40, fontSize: "var(--text-xs)" }}
@@ -29,7 +29,7 @@ function ModuleCard({ module: m }: { module: Module }) {
           <div>
             <div className="card-title">{m.title}</div>
             <div className="text-2 text-sm">{m.subtitle}</div>
-            <div className="row mt-2" style={{ gap: "var(--sp-2)" }}>
+            <div className="row mt-2" style={{ gap: "var(--sp-2)", flexWrap: "wrap" }}>
               <Badge tone="neutral" size="xs">
                 Cap. {m.chapter}
               </Badge>

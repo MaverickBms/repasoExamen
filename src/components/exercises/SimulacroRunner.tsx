@@ -121,7 +121,7 @@ export function SimulacroRunner({ simulacro }: { simulacro: Simulacro }) {
                   <p className="sim-prompt">{q.prompt}</p>
 
                   {q.part === "I" && q.options && (
-                    <div className="mc-options" role="group" aria-label={`Opciones de la pregunta ${i + 1}`}>
+                    <div className="mc-options align-none" role="group" aria-label={`Opciones de la pregunta ${i + 1}`}>
                       {q.options.map((o, idx) => {
                         const isSel = a?.kind === "opt" && a.idx === idx;
                         const showCorrect = submitted && correct === true && isSel;
@@ -144,7 +144,7 @@ export function SimulacroRunner({ simulacro }: { simulacro: Simulacro }) {
                   )}
 
                   {q.part === "II" && (
-                    <div className="mc-options" role="group" aria-label={`Verdadero o Falso de la pregunta ${i + 1}`}>
+                    <div className="mc-options align-none" role="group" aria-label={`Verdadero o Falso de la pregunta ${i + 1}`}>
                       {[true, false].map((v) => {
                         const isSel = a?.kind === "tf" && a.val === v;
                         const ok = submitted && correct === true && isSel;
@@ -169,7 +169,7 @@ export function SimulacroRunner({ simulacro }: { simulacro: Simulacro }) {
                   {(q.part === "III" || q.part === "IV" || q.part === "V") && (
                     <div style={{ marginTop: "var(--sp-2)" }}>
                       <label className="field-label" htmlFor={`sim-${q.id}`}>
-                        {q.part === "IV" ? "Tu solución (código o diagrama)" : "Tu respuesta"}
+                        {q.part === "IV" ? "Su solución (código o diagrama)" : "Su respuesta"}
                       </label>
                       <textarea
                         id={`sim-${q.id}`}
@@ -178,7 +178,7 @@ export function SimulacroRunner({ simulacro }: { simulacro: Simulacro }) {
                         value={a?.kind === "open" ? a.text : ""}
                         onChange={(e) => !submitted && setAnswer(q.id, { kind: "open", text: e.target.value })}
                         disabled={submitted}
-                        placeholder="Escribe aquí tu respuesta…"
+                        placeholder="Escriba aquí su respuesta…"
                       />
                     </div>
                   )}
@@ -212,8 +212,8 @@ export function SimulacroRunner({ simulacro }: { simulacro: Simulacro }) {
       ) : (
         <div className="notice">
           <strong>Resultado:</strong> {answeredRef.current.autoCorrect}/{autoQuestions.length} correctas en las partes
-          evaluables (I–II) · {responded}/{all.length} respondidas de 30. Las Partes III–V no tienen clave de
-          corrección automática en la guía: revisa cada solución modelo arriba.
+          evaluables (I–II) · {responded}/{all.length} respondidas de 30. Las partes III a V no tienen clave de
+          corrección automática en la guía: revise cada solución modelo arriba.
         </div>
       )}
     </div>

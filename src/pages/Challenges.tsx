@@ -6,7 +6,7 @@ export function Challenges() {
       eyebrow="Desafíos"
       eyebrowIcon="trophy"
       title="Desafíos"
-      subtitle="Ejercicios mixtos de los 9 tipos: selección múltiple, verdadero/falso, completar código, detectar errores, predecir salida, ordenar código, clasificar y UML."
+      subtitle="Ejercicios mixtos de los distintos tipos: selección múltiple, verdadero/falso, completar código, detectar errores, predecir salida, ordenar código, clasificar y UML."
     />
   );
 }

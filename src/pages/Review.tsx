@@ -39,7 +39,7 @@ export function Review() {
         eyebrow="Repaso"
         eyebrowIcon="refresh"
         title="Repaso de alto rendimiento"
-        subtitle="El capítulo 15 (tabla de conceptos + las 20 cosas que definitivamente debes saber) y el checklist final del capítulo 16. Lectura y revisión."
+        subtitle="El capítulo 15 (tabla de conceptos y las 20 ideas clave) y el checklist final del capítulo 16, organizados para el repaso final."
       />
       <div className="stack stack-lg">
         <div className="stack" style={{ gap: "var(--sp-3)" }}>
@@ -78,8 +78,8 @@ export function Review() {
                 <Badge tone="accent" size="xs">{CHECKLIST.items.length} elementos</Badge>
               </h4>
               <div className="notice">
-                Lista de lectura/revisión: las casillas funcionales, el progreso y la
-                persistencia llegarán en fases posteriores (FASE 3 = solo lectura).
+                Lista de lectura y revisión. Las casillas interactivas y el registro de
+                avance se incorporarán en versiones futuras.
               </div>
               <ol className="q-list">
                 {CHECKLIST.items.map((item, i) => (

@@ -7,15 +7,15 @@ import { SimulacroRunner } from "../components/exercises/SimulacroRunner";
 import { SourceRefView } from "../components/content/SourceRef";
 import { SIMULACRO } from "../data/banco/simulacro";
 
-export function Simulacro() {
-  const [mode, setMode] = useState<"lectura" | "examen">("lectura");
+export function Simulacro({ initialMode = "lectura" }: { initialMode?: "lectura" | "examen" }) {
+  const [mode, setMode] = useState<"lectura" | "examen">(initialMode);
   return (
     <>
       <PageHeader
         eyebrow="Simulacro"
         eyebrowIcon="timer"
         title="Simulacro de evaluación"
-        subtitle="Examen de 30 preguntas en 5 partes con tiempo sugerido de 90 minutos y su solucionario (cap. 13 de la guía). La parte I–II se evalúa con clave del solucionario; III–V muestran la solución modelo."
+        subtitle="Examen de 30 preguntas en 5 partes, con tiempo sugerido de 90 minutos y su solucionario (capítulo 13 de la guía). Las partes I y II se evalúan con la clave del solucionario; las partes III a V muestran la solución modelo."
       />
       <div className="stack" style={{ gap: "var(--sp-3)" }}>
         <SourceRefView ref={SIMULACRO.source} label="Capítulo 13 · fuente" />

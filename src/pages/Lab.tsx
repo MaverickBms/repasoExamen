@@ -6,8 +6,8 @@ export function Lab() {
       eyebrow="Laboratorio"
       eyebrowIcon="flask"
       title="Laboratorio de código"
-      subtitle="Editor de código Java (con comparaciones opcionales Java ↔ Dart) con ejecución simulada y explicaciones predefinidas."
-      note="Las muestras de código, la salida esperada y las explicaciones se integrarán en la FASE 3–4."
+      subtitle="Editor de código Java (con comparaciones opcionales Java / Dart), ejecución simulada y explicaciones predefinidas."
+      note="Las muestras de código, la salida esperada y las explicaciones se incorporarán en una próxima versión."
     />
   );
 }

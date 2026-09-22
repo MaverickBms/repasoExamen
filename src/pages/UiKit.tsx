@@ -256,7 +256,7 @@ export function UiKit() {
           </Button>
           <Button
             variant="secondary"
-            onClick={() => showToast({ tone: "warning", title: "Aviso", message: "Revisá tu respuesta." })}
+            onClick={() => showToast({ tone: "warning", title: "Aviso", message: "Revise su respuesta." })}
           >
             Toast aviso
           </Button>

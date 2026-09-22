@@ -104,7 +104,7 @@ export function ExercisePlayer({ exercise }: { exercise: Exercise }) {
 
       {exercise.type === "mc" && exercise.options && (
         <div className="exercise" style={{ marginTop: "var(--sp-2)" }}>
-          <div className="mc-options" role="group" aria-label="Opciones">
+          <div className="mc-options align-none" role="group" aria-label="Opciones">
             {exercise.options.map((o, i) => (
               <button
                 type="button"
@@ -125,7 +125,7 @@ export function ExercisePlayer({ exercise }: { exercise: Exercise }) {
           </div>
           {!hasAnswer && checked && (
             <Badge tone="warning" size="xs">
-              Sin respuesta en la fuente: la selección queda para tu reflexión.
+              Sin respuesta en la fuente: la selección queda para su reflexión.
             </Badge>
           )}
         </div>
@@ -133,7 +133,7 @@ export function ExercisePlayer({ exercise }: { exercise: Exercise }) {
 
       {exercise.type === "tf" && (
         <div className="exercise" style={{ marginTop: "var(--sp-2)" }}>
-          <div className="mc-options" role="group" aria-label="Verdadero o Falso">
+          <div className="mc-options align-none" role="group" aria-label="Verdadero o Falso">
             {[true, false].map((v) => (
               <button
                 type="button"
@@ -158,7 +158,7 @@ export function ExercisePlayer({ exercise }: { exercise: Exercise }) {
       {isOpenType && (
         <div className="exercise" style={{ marginTop: "var(--sp-3)" }}>
           <label className="field-label" htmlFor={`resp-${exercise.id}`}>
-            {hasAnswer ? "Escribe tu respuesta y luego compárala con la de la guía" : "Escribe tu reflexión (este ejercicio no tiene respuesta en la guía)"}
+            {hasAnswer ? "Escriba su respuesta y luego compárela con la de la guía" : "Escriba su reflexión (este ejercicio no tiene respuesta en la guía)"}
           </label>
           <textarea
             id={`resp-${exercise.id}`}
@@ -166,7 +166,7 @@ export function ExercisePlayer({ exercise }: { exercise: Exercise }) {
             rows={4}
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="Escribe aquí tu razonamiento…"
+            placeholder="Escriba aquí su razonamiento…"
           />
           <div className="row mt-2" style={{ gap: "var(--sp-2)" }}>
             <Button size="sm" variant="secondary" onClick={saveReflection} disabled={text.trim().length === 0}>

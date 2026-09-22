@@ -212,7 +212,7 @@ export const M10_SISTEMA_ACADEMICO: Module = {
 
     ref("10.3", "Diagrama UML", "2141–2184", {
       concept: [
-        p("Diagrama de clases completo del sistema (guía, renderizado en FASE 4):"),
+        p("Diagrama de clases completo del sistema (fuente: guía):"),
       ],
       codeBlocks: [
         cb("m10-s103-c1", { chapter: 10, section: "10.3", lines: "2143–2184" }, UML_SISTEMA, "text", {

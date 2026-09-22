@@ -19,8 +19,8 @@ export function TransversalResource() {
         <PageHeader eyebrow="Recurso transversal" eyebrowIcon="diagram" title="Recurso no disponible" />
         <Card padding="md">
           <p>
-            El recurso <code>{id || "(sin id)"}</code> aún no está cargado en esta etapa de la
-            FASE 3.
+            El recurso <code>{id || "(sin id)"}</code> aún no está disponible en esta versión de la
+            plataforma.
           </p>
           <div className="row mt-4">
             <Button to="/conceptos" variant="primary">

@@ -10,7 +10,7 @@ export function Glossary() {
         eyebrow="Glosario"
         eyebrowIcon="glossary"
         title="Glosario"
-        subtitle="Los términos fundamentales de POO según el capítulo 14 de la guía (lectura y revisión; búsqueda y filtros en etapas posteriores)."
+        subtitle="Los términos fundamentales de POO según el capítulo 14 de la guía (lectura y revisión)."
       />
       <Card padding="md" variant="flat" className="anim-rise">
         <TransversalResourceView resource={GLOSARIO} />

@@ -186,7 +186,7 @@ export const M07_POLIMORFISMO: Module = {
       ],
       codeBlocks: [
         cb("m07-s77-c1", { chapter: 7, section: "7.7", lines: "1661–1670" }, DESPACHO_SEQUENCE, "text", {
-          title: "sequenceDiagram — Despacho dinámico (guía, renderizado en FASE 4)",
+          title: "sequenceDiagram — Despacho dinámico (fuente: guía)",
         }),
       ],
     }),

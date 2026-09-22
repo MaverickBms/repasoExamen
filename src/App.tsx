@@ -59,9 +59,15 @@ function resolveRoute(path: string): RouteResult {
     case "uml":
       return { title: "UML", node: <UML /> };
     case "banco":
-      return { title: "Banco de preguntas", node: <QuestionBank /> };
+      return {
+        title: "Banco de preguntas",
+        node: segs[1] === "practicar" ? <QuestionBank initialMode="practicar" /> : <QuestionBank />,
+      };
     case "simulacro":
-      return { title: "Simulacro de evaluación", node: <Simulacro /> };
+      return {
+        title: "Simulacro de evaluación",
+        node: segs[1] === "examen" ? <Simulacro initialMode="examen" /> : <Simulacro />,
+      };
     case "glosario":
       return { title: "Glosario", node: <Glossary /> };
     case "recurso":

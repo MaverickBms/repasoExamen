@@ -8,7 +8,7 @@ export function NotFound() {
       <PageHeader eyebrow="Error 404" eyebrowIcon="warning" title="Ruta no encontrada" />
       <Card padding="lg">
         <p className="text-2">
-          No existe una página para la ruta actual. Volvé al inicio para continuar.
+          No existe una página para la ruta actual. Puede volver al inicio para continuar.
         </p>
         <div className="mt-4 row">
           <Button to="/" variant="primary">

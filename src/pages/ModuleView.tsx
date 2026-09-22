@@ -20,8 +20,8 @@ export function ModuleView() {
         <PageHeader eyebrow="Módulo" eyebrowIcon="book" title="Módulo no disponible" />
         <Card padding="md">
           <p>
-            El módulo <code>{id || "(sin id)"}</code> aún no está cargado en esta etapa de la
-            FASE 3.
+            El módulo <code>{id || "(sin id)"}</code> aún no está disponible en esta versión de la
+            plataforma.
           </p>
           <div className="row mt-4">
             <Button to="/conceptos" variant="primary">

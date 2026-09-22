@@ -196,7 +196,7 @@ export const M08_UML_RELACIONES: Module = {
       ],
       codeBlocks: [
         cb("m08-s83-c1", { chapter: 8, section: "8.3", lines: "1798–1808" }, M_CUENTA, "text", {
-          title: "Diagrama de clases — Cuenta (guía, renderizado en FASE 4)",
+          title: "Diagrama de clases — Cuenta (fuente: guía)",
         }),
       ],
     }),
@@ -274,7 +274,7 @@ export const M08_UML_RELACIONES: Module = {
           title: "Código fuente de ejemplo",
         }),
         cb("m08-s87-c2", { chapter: 8, section: "8.7", lines: "2022–2039" }, M_UNIVERSIDAD, "text", {
-          title: "Mermaid — Resultado (guía, renderizado en FASE 4)",
+          title: "Mermaid — Resultado (fuente: guía)",
         }),
       ],
     }),

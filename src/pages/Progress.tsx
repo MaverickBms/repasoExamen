@@ -6,7 +6,7 @@ export function Progress() {
       eyebrow="Progreso"
       eyebrowIcon="chart"
       title="Progreso"
-      subtitle="Estadísticas, niveles, insignias, racha y resultados históricos. La gamificación se implementa en FASE 5 y la persistencia en FASE 7."
+      subtitle="Estadísticas, niveles, insignias, racha y resultados históricos del avance de estudio."
     />
   );
 }

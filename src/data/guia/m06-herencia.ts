@@ -198,7 +198,7 @@ export const M06_HERENCIA: Module = {
       ],
       codeBlocks: [
         cb("m06-s610-c1", { chapter: 6, section: "6.10", lines: "1408–1425" }, VEHIUREJA_MERMAID, "text", {
-          title: "Diagrama Mermaid — herencia jerárquica (guía, renderizado en FASE 4)",
+          title: "Diagrama Mermaid — herencia jerárquica (fuente: guía)",
         }),
       ],
     }),

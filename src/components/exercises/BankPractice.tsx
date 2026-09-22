@@ -64,8 +64,8 @@ export function BankPractice({ bank }: { bank: QuestionBank }) {
     return (
       <div className="stack" style={{ gap: "var(--sp-3)" }}>
         <div className="notice">
-          <strong>Sesión completada.</strong> Revisaste {pool.length} preguntas del capítulo 12. Este capítulo no
-          provee respuestas: tus reflexiones quedan registradas en memoria (no se envían a ningún servidor).
+          <strong>Sesión completada.</strong> Revisó {pool.length} preguntas del capítulo 12. Este capítulo no
+          incluye respuestas: sus reflexiones quedan registradas en el navegador (no se envían a ningún servidor).
         </div>
         <div className="row" style={{ gap: "var(--sp-2)" }}>
           <Button size="sm" variant="secondary" onClick={reset}>
@@ -91,7 +91,7 @@ export function BankPractice({ bank }: { bank: QuestionBank }) {
         <p className="sim-prompt">{q.prompt}</p>
         <div style={{ marginTop: "var(--sp-3)" }}>
           <label className="field-label" htmlFor={`bank-${q.id}`}>
-            Tu reflexión (sin respuesta en la guía para el cap. 12)
+            Su reflexión (el capítulo 12 no incluye respuestas en la guía)
           </label>
           <textarea
             id={`bank-${q.id}`}
@@ -99,7 +99,7 @@ export function BankPractice({ bank }: { bank: QuestionBank }) {
             rows={4}
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="¿Qué sabes de este concepto? ¿Cómo lo aplicarías en Java?"
+            placeholder="¿Qué sabe de este concepto? ¿Cómo lo aplicaría en Java?"
           />
         </div>
         <div className="row" style={{ gap: "var(--sp-2)", marginTop: "var(--sp-3)" }}>

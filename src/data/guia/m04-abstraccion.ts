@@ -237,7 +237,7 @@ export const M04_ABSTRACCION: Module = {
       ],
       codeBlocks: [
         cb("m04-s46-c1", { chapter: 4, section: "4.6", lines: "1032–1052" }, MERMAID_C4, "text", {
-          title: "Diagrama Mermaid original de la guía (renderizado en FASE 4)",
+          title: "Diagrama Mermaid original de la guía",
           explanation: [p("`Empleado <|-- Gerente` = herencia; `Bonificable <|.. Gerente` = implementación.")],
         }),
       ],

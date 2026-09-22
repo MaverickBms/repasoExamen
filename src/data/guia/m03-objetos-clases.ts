@@ -188,7 +188,7 @@ private int edad;`, "java", { title: "Atributos" }),
         +saludar() void
     }`, "text", {
           title: "Diagrama de clases — Persona",
-          explanation: [p("Diagrama Mermaid original de la guía (renderizado en FASE 4).")],
+          explanation: [p("Diagrama Mermaid original de la guía.")],
         }),
       ],
     }),
@@ -208,7 +208,7 @@ private int edad;`, "java", { title: "Atributos" }),
         edad = 25
     }`, "text", {
           title: "Diagrama de objetos — p1 y p2",
-          explanation: [p("Diagrama Mermaid original de la guía (renderizado en FASE 4).")],
+          explanation: [p("Diagrama Mermaid original de la guía.")],
         }),
       ],
     }),

@@ -12,7 +12,7 @@ export function Concepts() {
         eyebrow="Conceptos"
         eyebrowIcon="book"
         title="Conceptos"
-        subtitle="Los 10 módulos de aprendizaje derivados de los capítulos 1–10 de la guía, junto a los recursos transversales de POO."
+        subtitle="Los 10 módulos de aprendizaje derivados de los capítulos 1 a 10 de la guía, junto con los recursos transversales de POO."
       />
       <div className="stack stack-lg">
         <ModuleList />
@@ -22,17 +22,19 @@ export function Concepts() {
           <div className="ukit-grid">
             {TRANSVERSAL_RESOURCES.map((r) => (
               <Card key={r.id} padding="md" variant="hover">
-                <div className="row" style={{ justifyContent: "space-between", gap: "var(--sp-3)" }}>
-                  <div>
-                    <div className="card-title">{r.title}</div>
-                    <p className="text-2 text-sm">{r.subtitle}</p>
-                    <div className="row mt-2" style={{ gap: "var(--sp-2)" }}>
-                      <Badge tone="accent" size="xs">
-                        Cap. {r.chapter}
-                      </Badge>
-                      <Badge tone="neutral" size="xs">
-                        {r.kind === "glosario" ? `${r.terms.length} términos` : "Diagramas"}
-                      </Badge>
+                <div className="row" style={{ justifyContent: "space-between", gap: "var(--sp-3)", flexWrap: "wrap", alignItems: "center" }}>
+                  <div className="row" style={{ flex: "1 1 220px", flexWrap: "wrap" }}>
+                    <div>
+                      <div className="card-title">{r.title}</div>
+                      <p className="text-2 text-sm">{r.subtitle}</p>
+                      <div className="row mt-2" style={{ gap: "var(--sp-2)" }}>
+                        <Badge tone="accent" size="xs">
+                          Cap. {r.chapter}
+                        </Badge>
+                        <Badge tone="neutral" size="xs">
+                          {r.kind === "glosario" ? `${r.terms.length} términos` : "Diagramas"}
+                        </Badge>
+                      </div>
                     </div>
                   </div>
                   <Button
