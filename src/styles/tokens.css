@@ -1,0 +1,194 @@
+/* ============================================================
+   POO Racing Academy — Design Tokens
+   Sistema visual FASE 2. Identidad "POO Racing Academy":
+   carbono / pit lane nocturno / telemetría (dark)
+   papel académico / laboratorio (light).
+   La estética racing es sutil y subordinada a la lectura.
+   ============================================================ */
+
+:root {
+  /* ---------- Tipografía (sin fuentes externas) ---------- */
+  --font-sans: "Segoe UI Variable Display", "Segoe UI", Inter,
+    system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace,
+    SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* ---------- Escala tipográfica ---------- */
+  --text-xs: 0.75rem;      /* 12 */
+  --text-sm: 0.8125rem;    /* 13 */
+  --text-base: 0.9375rem;  /* 15 */
+  --text-md: 1.0625rem;    /* 17 */
+  --text-lg: 1.25rem;      /* 20 */
+  --text-xl: 1.5rem;       /* 24 */
+  --text-2xl: 2rem;        /* 32 */
+  --text-display: clamp(2rem, 4vw + 0.5rem, 2.75rem);
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.55;
+  --lh-loose: 1.7;
+
+  /* ---------- Espaciado (base 4px) ---------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-7: 2rem;
+  --sp-8: 2.5rem;
+  --sp-9: 3rem;
+  --sp-10: 4rem;
+
+  /* ---------- Radios ---------- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 26px;
+  --r-full: 999px;
+
+  /* ---------- Capas (z-index) ---------- */
+  --z-base: 0;
+  --z-sticky: 20;
+  --z-topbar: 30;
+  --z-drawer: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+
+  /* ---------- Transiciones ---------- */
+  --t-fast: 120ms;
+  --t: 180ms;
+  --t-slow: 300ms;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* ---------- Layout ---------- */
+  --main-max: 1120px;
+  --sidebar-w: 248px;
+
+  /* ---------- Marco responsive (documentación) ---------- */
+  --bw-sm: 640px;
+  --bw-md: 768px;
+  --bw-lg: 1024px;
+  --bw-xl: 1280px;
+}
+
+/* ============================ TEMA OSCURO (default) ============================ */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Fondos (carbono) */
+  --bg: #0a0d13;
+  --bg-2: #0e1220;
+  --surface: #12161f;
+  --surface-hover: #161c29;
+  --surface-2: #1a2130;
+  --surface-3: #232c40;
+  --border: #242c3d;
+  --border-strong: #36425e;
+
+  /* Texto */
+  --text: #e9edf4;
+  --text-2: #a4afc2;
+  --text-3: #6b7790;
+  --text-invert: #0a0d13;
+
+  /* Acento racing rojo */
+  --accent: #ff4d55;
+  --accent-hover: #ff6a71;
+  --accent-soft: rgba(255, 77, 85, 0.12);
+  --accent-contrast: #ffffff;
+
+  /* Meta / dorado (checkered flag, logros) */
+  --gold: #ffb703;
+  --gold-hover: #ffc844;
+  --gold-soft: rgba(255, 183, 3, 0.13);
+
+  /* Semánticos */
+  --info: #57a9fa;
+  --success: #3cc97a;
+  --warning: #f2a33c;
+  --danger: #f2505e;
+
+  /* UI */
+  --focus: var(--gold);
+  --track: #202839;
+  --scrim: rgba(4, 6, 11, 0.68);
+
+  /* Código */
+  --code-bg: #0b0f16;
+  --code-header: #141a26;
+  --code-kw: #ff7b86;
+  --code-str: #8fd6a4;
+  --code-num: #ffd479;
+  --code-com: #6b7790;
+  --code-ann: #8ab7ff;
+  --code-type: #7ec6d8;
+
+  /* Elevación */
+  --shadow-s: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-m: 0 6px 18px rgba(0, 0, 0, 0.38);
+  --shadow-l: 0 18px 44px rgba(0, 0, 0, 0.5);
+  --ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--focus);
+
+  --gradient-race: linear-gradient(135deg, #ff4d55 0%, #ff8a3d 100%);
+
+  --checker-a: #e9edf4;
+  --checker-b: #1a2130;
+}
+
+/* ============================ TEMA CLARO ============================ */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f3f4f7;
+  --bg-2: #eaecf1;
+  --surface: #ffffff;
+  --surface-hover: #f7f8fb;
+  --surface-2: #eef1f6;
+  --surface-3: #e4e8f0;
+  --border: #d7dde7;
+  --border-strong: #b6c0d2;
+
+  --text: #161a22;
+  --text-2: #475169;
+  --text-3: #838da2;
+  --text-invert: #ffffff;
+
+  --accent: #d4252f;
+  --accent-hover: #b51e27;
+  --accent-soft: rgba(212, 37, 47, 0.09);
+  --accent-contrast: #ffffff;
+
+  --gold: #a86e00;
+  --gold-hover: #8f5c00;
+  --gold-soft: rgba(200, 134, 6, 0.12);
+
+  --info: #2463c6;
+  --success: #16814d;
+  --warning: #a96812;
+  --danger: #bc3141;
+
+  --focus: var(--accent);
+  --track: #e2e6ee;
+  --scrim: rgba(20, 24, 33, 0.4);
+
+  --code-bg: #f8f9fb;
+  --code-header: #edf0f5;
+  --code-kw: #c0222c;
+  --code-str: #116b3b;
+  --code-num: #8a5a00;
+  --code-com: #8791a5;
+  --code-ann: #2050a8;
+  --code-type: #0b6b80;
+
+  --shadow-s: 0 1px 2px rgba(23, 28, 41, 0.08);
+  --shadow-m: 0 8px 20px rgba(23, 28, 41, 0.1);
+  --shadow-l: 0 20px 48px rgba(23, 28, 41, 0.16);
+  --ring: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--focus);
+
+  --gradient-race: linear-gradient(135deg, #d4252f 0%, #e07b12 100%);
+
+  --checker-a: #161a22;
+  --checker-b: #ffffff;
+}

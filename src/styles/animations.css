@@ -1,0 +1,116 @@
+/* ============================================================
+   Animaciones — microinteracciones rápidas y con propósito.
+   Respetan prefers-reduced-motion.
+   ============================================================ */
+
+@keyframes fac-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: calc(400px + 100%) 0; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+@keyframes checker-move {
+  from { background-position: 0 0; }
+  to { background-position: 20px 0; }
+}
+
+/* Clases de entrada (aplicar con utilidad de stagger si se necesita) */
+.anim-fade { animation: fac-in var(--t) var(--ease) both; }
+.anim-rise { animation: rise-in var(--t-slow) var(--ease) both; }
+.anim-pop { animation: pop-in 220ms var(--ease) both; }
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse-dot 1.6s var(--ease) infinite;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--track);
+  border-top-color: currentColor;
+  animation: spin 700ms linear infinite;
+}
+
+.checker-strip {
+  height: 6px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--checker-a) 0 10px,
+      var(--checker-b) 10px 20px
+    );
+}
+
+/* ---------- Reducción de movimiento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
