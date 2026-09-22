@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { PageHeader } from "../layout/PageHeader";
 import { Card } from "./Card";
-import { SkeletonBlock } from "./Skeleton";
+import { Badge } from "./Badge";
 import type { IconName } from "./icons";
 
 interface PlaceholderPageProps {
@@ -14,9 +14,9 @@ interface PlaceholderPageProps {
 }
 
 /**
- * Plantilla de página para FASE 2: demuestra que la navegación,
- * el layout y el tema funcionan, sin contenido académico todavía.
- * El contenido real llega en FASE 3.
+ * Plantilla de página para secciones aún en preparación.
+ * Muestra un estado claro y estático (sin esqueletos animados) para que
+ * el usuario sepa que la sección cargó correctamente y está en construcción.
  */
 export function PlaceholderPage({
   eyebrow,
@@ -31,18 +31,20 @@ export function PlaceholderPage({
       <PageHeader eyebrow={eyebrow} eyebrowIcon={eyebrowIcon} title={title} subtitle={subtitle} />
       <div className="stack stack-lg">
         {children}
-        <Card padding="md" variant="flat">
+        <Card padding="lg" variant="flat">
           <div className="ph-box">
-            <p>
-              <strong>Sección en preparación.</strong>
+            <Badge tone="neutral" size="sm">
+              En preparación
+            </Badge>
+            <p className="mt-3">
+              <strong>Esta sección aún no tiene contenido.</strong>
             </p>
-            <p className="mt-2 text-3">
+            <p className="mt-2 text-3" style={{ maxWidth: "58ch", marginInline: "auto" }}>
               {note ??
-                "El contenido académico de esta sección se está preparando y estará disponible en una próxima versión de la plataforma, conservando la guía guiaPOO.md como fuente principal."}
+                "El contenido académico de esta sección está en preparación y estará disponible en una próxima versión de la plataforma, conservando la guía guiaPOO.md como fuente principal."}
             </p>
           </div>
         </Card>
-        <SkeletonBlock lines={4} />
       </div>
     </>
   );
